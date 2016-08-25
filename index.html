@@ -6,7 +6,7 @@ layout: page
   <ul>
     {% for page in paginator.posts %}
     <li >
-      <a style="font-family:Helvatica,sans-serif;font-size:1.2em;font-weight:600;color:black;" href="{{page.url}}">{{page.title}}</a></li>
+      <a style="font-family:Helvatica,sans-serif;font-size:1.2em;font-weight:600;color:black;" href="{{baseurl}}{{page.url}}">{{page.title}}</a></li>
     <li>
       <span>{{page.time}}</span>
       <span>{{page.tags}}</span>
