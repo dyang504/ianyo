@@ -16,13 +16,13 @@ layout: default
   <div class="row">
   <div class="inline padding">
     {% if page.previous %}
-    <a href="{{baseurl}}{{page.previous.url}}">NEXT: {{page.previous.title}}</a>
+    <a href="{{site.baseurl}}{{page.previous.url}}">NEXT: {{page.previous.title}}</a>
     {% endif %}
     {% if page.previous and page.next %}
     <li class="pip">|</li>
     {% endif %}
     {% if page.next %}
-    <a href="{{baseurl}}{{page.next.url}}">PREVIOUS: {{page.next.title}}</a>
+    <a href="{{site.baseurl}}{{page.next.url}}">PREVIOUS: {{page.next.title}}</a>
     {% endif %}
   </div>
   </div>
