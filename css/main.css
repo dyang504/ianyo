@@ -1,0 +1,81 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+html{
+  background-image: linear-gradient(to bottom,#fff,#EFEFEF);
+}
+div .footer {
+  margin: 0 auto;
+}
+.header{
+  margin: 0 auto;
+
+}
+.logo{
+  font-weight: 700;
+  font-size: 4em;
+  font-family: 'PT Sans',sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 1px #666,-1px -1px 1px #666;
+}
+.nav{
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.button{
+  border: none;
+  color: rgb(25,25,25);
+  margin: -10px;
+  float: right;
+}
+.button:hover{
+  background-color: rgba(230,230,230,.5);
+}
+
+.footer .contact{
+  background-color: #191919;
+  float: left;
+  margin-left: -40px;
+}
+.footer .contact:hover{
+  background-color: rgba(255,255,255,.9);
+  color: #191919;
+}
+.content{
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .more{
+  color: #000;
+  border-bottom: 2px solid #7F7F7F;
+}
+.content-pic{
+  padding: 10px;
+}
+.footer{
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: #7F7F7F;
+}
+.footer a{
+  color: #fff;
+}
+ul li,li{
+  list-style: none;
+}
+.inline{
+  display: flex;
+  justify-content: center;
+}
+.pip{
+  padding: 0 1em 0 1em;
+}
+.padding{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}

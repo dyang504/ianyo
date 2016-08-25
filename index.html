@@ -1,0 +1,30 @@
+---
+layout: page
+---
+
+<div style="padding-left:15%; max-width:70%;">
+  <ul>
+    {% for page in paginator.posts %}
+    <li >
+      <a style="font-family:Helvatica,sans-serif;font-size:1.2em;font-weight:600;color:black;" href="{{baseurl}}{{page.url}}">{{page.title}}</a></li>
+    <li>
+      <span>{{page.time}}</span>
+      <span>{{page.tags}}</span>
+
+    </li>
+    <li style="color:#B3B3B3;">{{page.meta}}</li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- Pagination links -->
+<div class="inline padding">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="pip">Previous</a>
+  {% endif %}
+  <span class="pip ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="pip">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

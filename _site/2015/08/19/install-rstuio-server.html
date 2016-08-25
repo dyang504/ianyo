@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='http://fonts.useso.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <style type="text/css">
+      html{
+        height: 100%；
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container header">
+      <div class="row">
+        <div class="four columns">
+          <p class="logo">IanYo</p>
+        </div>
+        <div class="eight columns nav">
+
+          <a class="button" href="about.html">about</a>
+        <!--  <a class="button" href="/blog/index.html">Blog</a>
+          <a class="button" href="/project_content.html">Projects Gallary</a>-->
+          <a class="button" href="/index.html">Home</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+  <article class="" style="padding:5% 0 0 15%;max-width:68%;">
+    <h2>安装Rstudio Server小记</h2>
+    <p>
+      2015-08-12
+      Software
+      
+    </p>
+    <ul>
+  <li>安装R语言</li>
+</ul>
+
+<p>安装之前最好添加<a href="https://cran.rstudio.com/bin/linux/ubuntu/README.html">软件源</a>，CRAN提供了许多<a href="https://cran.r-project.org/mirrors.html">镜像</a> 可供选择。只要选择一个离自己的服务器近的，或者<em>喜爱</em>的就行了。添加源主要是为了提供最新的软件，解决后面安装软件包过程中的依赖问题。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>deb http://&lt;my.favorite.cran.mirror&gt;/bin/linux/ubuntu trusty/
+http://cran.rstudio.com/
+</code></pre>
+</div>
+
+<p>命令如下</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install r-base
+</code></pre>
+</div>
+
+<ul>
+  <li>安装Rstudio Server</li>
+</ul>
+
+<blockquote>
+  <p>64bit<br />
+Size:  47 MB<br />
+MD5: 0121f12f56942bc88f363faf53ed999c<br />
+Version:  0.99.473<br />
+Released:  2015-08-12</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo apt-get install gdebi-core
+$ wget https://download2.rstudio.org/rstudio-server-0.99.473-amd64.deb
+$ sudo gdebi rstudio-server-0.99.473-amd64.deb
+</code></pre>
+</div>
+
+<p>可以用下面的命令来测试Rstudio是否安装成功</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rstudio-server verify-installation
+</code></pre>
+</div>
+
+<p>默认的登录地址是服务器的ip加8787。如果服务器的ip绑定了域名，还可以用域名加8787访问。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://&lt;server-ip&gt;:8787
+http://&lt;server-domain&gt;:8787
+</code></pre>
+</div>
+
+<p><strong>解决登录失败的问题</strong>：<a href="https://support.rstudio.com/hc/en-us/signin?return_to=https%3A%2F%2Fsupport.rstudio.com%2Fhc%2Fcommunities%2Fpublic%2Fquestions%2F200646688-RStudio-Server-Unable-To-Connect-To-Service">用adduser命令添加用户即可</a></p>
+
+<p>Rstudio server的几个配置命令：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo rstudio-server stop
+$ sudo rstudio-server start
+$ sudo rstudio-server restart
+</code></pre>
+</div>
+
+<p>对于会话的管理命令</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo rstudio-server active-sessions
+$ sudo rstudio-server suspend-session &lt;pid&gt;
+$ sudo rstudio-server suspend-all
+$ sudo rstudio-server force-suspend-session &lt;pid&gt;
+$ sudo rstudio-server force-suspend-all
+</code></pre>
+</div>
+
+<p>###注释：</p>
+
+<p>[1] <a href="https://www.rstudio.com/products/rstudio/download-server/">官方教程</a></p>
+
+<p>[2] <a href="https://support.rstudio.com/hc/en-us/articles/200552306-Getting-Started">官方开始</a></p>
+
+<p>[3] <a href="https://support.rstudio.com/hc/en-us/articles/200532327-Managing-the-Server">官方管理教程</a></p>
+
+  </article>
+  <div class="row">
+  <div class="inline padding">
+    
+    <a href="/review/2014/10/12/review-rumor-media.html">NEXT: 评述：《谣言 世界上最古老的传媒》让-诺埃尔·卡普费雷</a>
+    
+    
+    <li class="pip">|</li>
+    
+    
+    <a href="/review/2015/09/21/the-nature-of-the-firm.html">PREVIOUS: 读《企业的性质》一</a>
+    
+  </div>
+  </div>
+</div>
+
+    <div class="container footer">
+      <div class="row">
+      <div class="six columns">
+        <span>IanYo is a website for Personal Use.</span>
+      </div>
+        <div class="three columns">
+          <p style="display: inline;text-align: right;">You can contract me with</p>
+
+        </div>
+        <div class="three columns">
+          <a class="button-primary button contact" href="mailto:">email</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

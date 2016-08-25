@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='http://fonts.useso.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ baseurl }}/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{ baseurl }}/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="{{ baseurl }}/css/main.css">
+    <style type="text/css">
+      html{
+        height: 100%；
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container header">
+      <div class="row">
+        <div class="four columns">
+          <p class="logo">IanYo</p>
+        </div>
+        <div class="eight columns nav">
+
+          <a class="button" href="about.html">about</a>
+        <!--  <a class="button" href="{{baseurl}}/blog/index.html">Blog</a>
+          <a class="button" href="{{baseurl}}/project_content.html">Projects Gallary</a>-->
+          <a class="button" href="{{baseurl}}/index.html">Home</a>
+
+        </div>
+      </div>
+    </div>
+    {{ content }}
+    <div class="container footer">
+      <div class="row">
+      <div class="six columns">
+        <span>IanYo is a website for Personal Use.</span>
+      </div>
+        <div class="three columns">
+          <p style="display: inline;text-align: right;">You can contract me with</p>
+
+        </div>
+        <div class="three columns">
+          <a class="button-primary button contact" href="mailto:">email</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

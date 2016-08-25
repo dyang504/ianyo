@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="row">
+
+  <article class="" style="padding:5% 0 0 15%;max-width:68%;">
+    <h2>{{page.title}}</h2>
+    <p>
+      {{page.time}}
+      {{page.tags}}
+      {{page.categories}}
+    </p>
+    {{content}}
+  </article>
+  <div class="row">
+  <div class="inline padding">
+    {% if page.previous %}
+    <a href="{{baseurl}}{{page.previous.url}}">NEXT: {{page.previous.title}}</a>
+    {% endif %}
+    {% if page.previous and page.next %}
+    <li class="pip">|</li>
+    {% endif %}
+    {% if page.next %}
+    <a href="{{baseurl}}{{page.next.url}}">PREVIOUS: {{page.next.title}}</a>
+    {% endif %}
+  </div>
+  </div>
+</div>
